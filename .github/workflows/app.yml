@@ -37,7 +37,7 @@ jobs:
           KEYSTORE_FILE=../key.jks
           EOF
           else
-            keytool -genkey -alias a -dname CN=_ -storepass passwd -keypass passwd -keystore key.jks
+            keytool -genkey -alias a -dname CN=_ -storepass passwd -keypass passwd -keyalg RSA -keystore key.jks
             cat > signing.properties << EOF
           KEYSTORE_PASSWORD=passwd
           KEYSTORE_ALIAS=a
